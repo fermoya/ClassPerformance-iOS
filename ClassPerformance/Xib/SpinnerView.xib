@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SpinnerView" customModule="ClassPerformance" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMM-QB-yVT">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PwQ-Sn-9NB">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOV-H2-YZd">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Q3X-vY-egj">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="666"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hrP-nj-xbF">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="QMM-QB-yVT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CeQ-Om-K0L"/>
+                <constraint firstItem="QMM-QB-yVT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ESS-Oc-hZz"/>
+                <constraint firstItem="hrP-nj-xbF" firstAttribute="centerY" secondItem="QMM-QB-yVT" secondAttribute="centerY" id="Kjz-f3-nwU"/>
+                <constraint firstItem="QMM-QB-yVT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Lf4-HN-bJM"/>
+                <constraint firstItem="QMM-QB-yVT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vpj-SR-8a0"/>
+                <constraint firstItem="hrP-nj-xbF" firstAttribute="centerX" secondItem="QMM-QB-yVT" secondAttribute="centerX" id="apZ-sG-ULq"/>
+            </constraints>
+            <connections>
+                <outlet property="activityIndicatorView" destination="hrP-nj-xbF" id="IOY-71-S92"/>
+                <outlet property="visualEffectView" destination="QMM-QB-yVT" id="wES-2f-tgI"/>
+            </connections>
+        </view>
+    </objects>
+</document>
