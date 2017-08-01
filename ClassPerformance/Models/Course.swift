@@ -8,7 +8,8 @@
 
 import Foundation
 import FirebaseDatabase
-struct Course {
+
+struct Course: FirebaseObservable {
     var name: String
     var description: String
     var ref: DatabaseReference?

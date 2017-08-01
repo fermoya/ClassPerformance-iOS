@@ -8,12 +8,11 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
 import GoogleSignIn
 import FBSDKLoginKit
 import TwitterKit
 
-class CoursesViewController: SpinnerViewController, MyCoursesDelegate {
+class CoursesViewController: SpinnerViewController, MyCoursesDelegate, AuthManagerDelegate {
         
     @IBOutlet weak var emptyMessage: UILabel!
     @IBOutlet weak var coursesContainer: UIView!
@@ -71,51 +70,32 @@ class CoursesViewController: SpinnerViewController, MyCoursesDelegate {
     // MARK: log out
     
     @IBAction func logOutDidTap(_ sender: UIBarButtonItem) {
-        let providerId = Auth.auth().currentUser?.providerData.first?.providerID
-        if logOutFromFirebase() {
-            logOut(fromProvider: providerId)
-            self.performSegue(withIdentifier: "Log Out", sender: nil)
+        let authManager: AuthManager
+        if let providerId = Auth.auth().currentUser?.providerData.first?.providerID {
+            authManager = findAuthManager(by: providerId)
+        } else {
+            authManager = EmailAuthManager(delegate: self)
         }
-    }
-    
-    func logOutFromFirebase() -> Bool {
-        do {
-            try Auth.auth().signOut()
-            return true
-        } catch let error as NSError {
-            self.showErrorAlert(withMessage: error.localizedDescription)
-            return false
-        }
-    }
-    
-    func logOut(fromProvider providerId: String?) {
-        if let providerId = providerId {
-            switch providerId {
-            case "google.com":
-                logOutWithGoogle()
-            case "twitter.com":
-                logOutWithTwitter()
-            case "facebook.com":
-                logOutWithFacebook()
-            default:
-                break
-            }
-        }
-    }
-    
-    func logOutWithFacebook() {
-        FBSDKLoginManager().logOut()
-    }
-    
-    func logOutWithGoogle() {
-        GIDSignIn.sharedInstance().signOut()
-    }
-    
-    func logOutWithTwitter() {
-        let store = Twitter.sharedInstance().sessionStore
         
-        if let userID = store.session()?.userID {
-            store.logOutUserID(userID)
+        authManager.logOut() { [weak self] in
+            self?.performSegue(withIdentifier: "Log Out", sender: nil)
+        }
+    }
+    
+    private func findAuthManager(by providerId: String?) -> AuthManager {
+        guard let providerId = providerId else {
+            return EmailAuthManager(delegate: self)
+        }
+        
+        switch providerId {
+        case "google.com":
+            return GoogleAuthManager(delegate: self)
+        case "twitter.com":
+            return TwitterAuthManager(delegate: self)
+        case "facebook.com":
+            return FacebookAuthManager(delegate: self)
+        default:
+            return EmailAuthManager(delegate: self)
         }
     }
     
@@ -126,6 +106,16 @@ class CoursesViewController: SpinnerViewController, MyCoursesDelegate {
             coursesCVC = courseCollectionVC
             coursesCVC.delegate = self
         }
+    }
+    
+    // MARK: AuthManagerDelegate
+    
+    func didLogInCancel() { }
+    
+    func didLogInSuccess() { }
+    
+    func didLogInError(withMessage message: String?) {
+        self.showErrorAlert(withMessage: message)
     }
     
 }

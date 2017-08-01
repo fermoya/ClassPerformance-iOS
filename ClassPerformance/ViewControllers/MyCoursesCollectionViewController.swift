@@ -15,7 +15,7 @@ private let reuseIdentifier = "Course Cell"
 class MyCoursesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private var indexSelected: IndexPath?
-    var delegate: MyCoursesDelegate?
+    weak var delegate: MyCoursesDelegate?
     private let ref = Database.database().reference(withPath: "courses")
     private var courses : [Course]?
 
@@ -36,22 +36,14 @@ class MyCoursesCollectionViewController: UICollectionViewController, UICollectio
     }
     
     private func fetchCourses() {
-        let user = Auth.auth().currentUser?.uid
-        ref.queryOrdered(byChild: "user").queryEqual(toValue: user).observe(.value, with: { [weak self] snapshot in
-            self?.courses = []
-            for item in snapshot.children {
-                let course = Course(with: item as? DataSnapshot)
-                if let course = course {
-                    self?.courses?.append(course)
-                }
+        if let user = AuthManager.currentUser {
+            let firebaseManager = FirebaseManager.sharedInstance;
+            firebaseManager.query(path: "courses", condition: "user", value: user, type: Course.self) { [weak self] results in
+                self?.courses = results
+                self?.delegate?.didFetchCourses(self?.courses ?? [])
+                self?.collectionView?.reloadData()
             }
-            self?.delegate?.didFetchCourses(self?.courses ?? [])
-            self?.collectionView?.reloadData()
-        })
-    }
-    
-    deinit {
-        delegate = nil
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -144,6 +136,6 @@ class MyCoursesCollectionViewController: UICollectionViewController, UICollectio
     
 }
 
-protocol MyCoursesDelegate {
+protocol MyCoursesDelegate: class {
     func didFetchCourses(_ courses: [Course])
 }
