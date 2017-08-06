@@ -21,13 +21,22 @@
 		3F811DD61F1F390F00705127 /* ViewController+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F811DD51F1F390F00705127 /* ViewController+ErrorAlert.swift */; };
 		3F8BA0791F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BA0781F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift */; };
 		3F8BA07B1F1CC9F900DDA298 /* MyCoursesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BA07A1F1CC9F900DDA298 /* MyCoursesCollectionViewCell.swift */; };
+		3FB16A281F30977600FB27FD /* FirebaseObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB16A271F30977600FB27FD /* FirebaseObservable.swift */; };
+		3FB16A2B1F30A19F00FB27FD /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB16A2A1F30A19F00FB27FD /* AuthManager.swift */; };
+		3FB16A2D1F30AB8C00FB27FD /* FacebookAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB16A2C1F30AB8C00FB27FD /* FacebookAuthManager.swift */; };
+		3FB16A2F1F30AC4F00FB27FD /* AuthManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB16A2E1F30AC4F00FB27FD /* AuthManagerDelegate.swift */; };
+		3FB16A311F30AFA700FB27FD /* TwitterAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB16A301F30AFA700FB27FD /* TwitterAuthManager.swift */; };
+		3FB16A331F30B0A500FB27FD /* GoogleAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB16A321F30B0A500FB27FD /* GoogleAuthManager.swift */; };
 		3FB5A4E11F18D3CB003035DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5A4E01F18D3CB003035DF /* AppDelegate.swift */; };
 		3FB5A4E61F18D3CB003035DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5A4E41F18D3CB003035DF /* Main.storyboard */; };
 		3FB5A4E81F18D3CB003035DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5A4E71F18D3CB003035DF /* Assets.xcassets */; };
 		3FB5A4EB1F18D3CB003035DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5A4E91F18D3CB003035DF /* LaunchScreen.storyboard */; };
 		3FB5A4F81F18EE22003035DF /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5A4F71F18EE22003035DF /* LogInViewController.swift */; };
 		3FD17A731F20CAE500F11F01 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD17A721F20CAE500F11F01 /* keys.plist */; };
+		3FE0B9151F30D9B60079868C /* EmailAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0B9141F30D9B60079868C /* EmailAuthManager.swift */; };
+		3FE0B9181F30F6D00079868C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0B9171F30F6D00079868C /* FirebaseManager.swift */; };
 		3FF5E9DB1F1FDF8C00A3F0EC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5E9DA1F1FDF8C00A3F0EC /* RoundButton.swift */; };
+		3FFF09A41F37B38100C11B19 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF09A31F37B38100C11B19 /* UIColor+RGB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +55,12 @@
 		3F811DD51F1F390F00705127 /* ViewController+ErrorAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ViewController+ErrorAlert.swift"; path = "Extensions/ViewController+ErrorAlert.swift"; sourceTree = "<group>"; };
 		3F8BA0781F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCoursesCollectionViewController.swift; path = ViewControllers/MyCoursesCollectionViewController.swift; sourceTree = "<group>"; };
 		3F8BA07A1F1CC9F900DDA298 /* MyCoursesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCoursesCollectionViewCell.swift; path = Views/MyCoursesCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FB16A271F30977600FB27FD /* FirebaseObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseObservable.swift; path = Firebase/FirebaseObservable.swift; sourceTree = "<group>"; };
+		3FB16A2A1F30A19F00FB27FD /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthManager.swift; path = Auth/AuthManager.swift; sourceTree = "<group>"; };
+		3FB16A2C1F30AB8C00FB27FD /* FacebookAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookAuthManager.swift; path = Auth/FacebookAuthManager.swift; sourceTree = "<group>"; };
+		3FB16A2E1F30AC4F00FB27FD /* AuthManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthManagerDelegate.swift; path = Auth/AuthManagerDelegate.swift; sourceTree = "<group>"; };
+		3FB16A301F30AFA700FB27FD /* TwitterAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterAuthManager.swift; path = Auth/TwitterAuthManager.swift; sourceTree = "<group>"; };
+		3FB16A321F30B0A500FB27FD /* GoogleAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAuthManager.swift; path = Auth/GoogleAuthManager.swift; sourceTree = "<group>"; };
 		3FB5A4DD1F18D3CB003035DF /* ClassPerformance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassPerformance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB5A4E01F18D3CB003035DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB5A4E51F18D3CB003035DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +69,10 @@
 		3FB5A4EC1F18D3CB003035DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB5A4F71F18EE22003035DF /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ViewControllers/LogInViewController.swift; sourceTree = "<group>"; };
 		3FD17A721F20CAE500F11F01 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		3FE0B9141F30D9B60079868C /* EmailAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailAuthManager.swift; path = Auth/EmailAuthManager.swift; sourceTree = "<group>"; };
+		3FE0B9171F30F6D00079868C /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Firebase/FirebaseManager.swift; sourceTree = "<group>"; };
 		3FF5E9DA1F1FDF8C00A3F0EC /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = Views/RoundButton.swift; sourceTree = "<group>"; };
+		3FFF09A31F37B38100C11B19 /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+RGB.swift"; path = "Extensions/UIColor+RGB.swift"; sourceTree = "<group>"; };
 		565B78571A1FDAAEED0E1254 /* Pods-ClassPerformance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassPerformance.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClassPerformance/Pods-ClassPerformance.release.xcconfig"; sourceTree = "<group>"; };
 		9CB71F045517DDEB23FCE5DE /* Pods_ClassPerformance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClassPerformance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -102,8 +120,22 @@
 			isa = PBXGroup;
 			children = (
 				3F811DD51F1F390F00705127 /* ViewController+ErrorAlert.swift */,
+				3FFF09A31F37B38100C11B19 /* UIColor+RGB.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		3FB16A291F30A16C00FB27FD /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3FB16A2A1F30A19F00FB27FD /* AuthManager.swift */,
+				3FB16A2C1F30AB8C00FB27FD /* FacebookAuthManager.swift */,
+				3FB16A2E1F30AC4F00FB27FD /* AuthManagerDelegate.swift */,
+				3FB16A301F30AFA700FB27FD /* TwitterAuthManager.swift */,
+				3FB16A321F30B0A500FB27FD /* GoogleAuthManager.swift */,
+				3FE0B9141F30D9B60079868C /* EmailAuthManager.swift */,
+			);
+			name = Auth;
 			sourceTree = "<group>";
 		};
 		3FB5A4D41F18D3CB003035DF = {
@@ -127,6 +159,8 @@
 		3FB5A4DF1F18D3CB003035DF /* ClassPerformance */ = {
 			isa = PBXGroup;
 			children = (
+				3FE0B9161F30F6AE0079868C /* Firebase */,
+				3FB16A291F30A16C00FB27FD /* Auth */,
 				3F1EFD2D1F25E432002CC521 /* Xib */,
 				3F811DD41F1F383A00705127 /* Extensions */,
 				3F2D80FE1F1B83740057E77B /* Views */,
@@ -156,6 +190,15 @@
 				3F1EFD301F25E6D2002CC521 /* SpinnerViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3FE0B9161F30F6AE0079868C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				3FE0B9171F30F6D00079868C /* FirebaseManager.swift */,
+				3FB16A271F30977600FB27FD /* FirebaseObservable.swift */,
+			);
+			name = Firebase;
 			sourceTree = "<group>";
 		};
 		A8ABA6194465EBBA3BD5D3B3 /* Pods */ = {
@@ -309,14 +352,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF5E9DB1F1FDF8C00A3F0EC /* RoundButton.swift in Sources */,
+				3FB16A311F30AFA700FB27FD /* TwitterAuthManager.swift in Sources */,
 				3F2D80F91F1B77200057E77B /* Course.swift in Sources */,
+				3FFF09A41F37B38100C11B19 /* UIColor+RGB.swift in Sources */,
 				3F2D80FD1F1B79C70057E77B /* NewCourseViewController.swift in Sources */,
 				3F1EFD311F25E6D2002CC521 /* SpinnerViewController.swift in Sources */,
+				3FB16A2B1F30A19F00FB27FD /* AuthManager.swift in Sources */,
+				3FE0B9151F30D9B60079868C /* EmailAuthManager.swift in Sources */,
 				3F811DD61F1F390F00705127 /* ViewController+ErrorAlert.swift in Sources */,
 				3FB5A4E11F18D3CB003035DF /* AppDelegate.swift in Sources */,
+				3FE0B9181F30F6D00079868C /* FirebaseManager.swift in Sources */,
 				3F8BA07B1F1CC9F900DDA298 /* MyCoursesCollectionViewCell.swift in Sources */,
+				3FB16A2F1F30AC4F00FB27FD /* AuthManagerDelegate.swift in Sources */,
 				3F8BA0791F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift in Sources */,
 				3FB5A4F81F18EE22003035DF /* LogInViewController.swift in Sources */,
+				3FB16A331F30B0A500FB27FD /* GoogleAuthManager.swift in Sources */,
+				3FB16A281F30977600FB27FD /* FirebaseObservable.swift in Sources */,
+				3FB16A2D1F30AB8C00FB27FD /* FacebookAuthManager.swift in Sources */,
 				3F559AC41F1EA42E003FE726 /* SignUpViewController.swift in Sources */,
 				3F2D81051F1B897F0057E77B /* CourseCellButton.swift in Sources */,
 				3F004D781F24A7F200CDD919 /* SpinnerView.swift in Sources */,

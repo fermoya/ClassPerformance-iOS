@@ -15,8 +15,7 @@ private let reuseIdentifier = "Course Cell"
 class MyCoursesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     private var indexSelected: IndexPath?
-    var delegate: MyCoursesDelegate?
-    private let ref = Database.database().reference(withPath: "courses")
+    weak var delegate: MyCoursesDelegate?
     private var courses : [Course]?
 
     override func viewDidLoad() {
@@ -25,33 +24,15 @@ class MyCoursesCollectionViewController: UICollectionViewController, UICollectio
         fetchCourses()
     }
     
-    func addCourse(_ course: Course) {
-        courses?.append(course)
-        saveCourse(course)
-    }
-    
-    private func saveCourse(_ course: Course) {
-        let courseRef = ref.child(course.name)
-        courseRef.setValue(course.toAnyObject())
-    }
-    
     private func fetchCourses() {
-        let user = Auth.auth().currentUser?.uid
-        ref.queryOrdered(byChild: "user").queryEqual(toValue: user).observe(.value, with: { [weak self] snapshot in
-            self?.courses = []
-            for item in snapshot.children {
-                let course = Course(with: item as? DataSnapshot)
-                if let course = course {
-                    self?.courses?.append(course)
-                }
+        if let user = AuthManager.currentUser {
+            let firebaseManager = FirebaseManager.sharedInstance;
+            firebaseManager.query(path: "courses", condition: "user", value: user, type: Course.self) { [weak self] results in
+                self?.courses = results
+                self?.delegate?.didFetchCourses(self?.courses ?? [])
+                self?.collectionView?.reloadData()
             }
-            self?.delegate?.didFetchCourses(self?.courses ?? [])
-            self?.collectionView?.reloadData()
-        })
-    }
-    
-    deinit {
-        delegate = nil
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -96,7 +77,17 @@ class MyCoursesCollectionViewController: UICollectionViewController, UICollectio
         let cellSpacing = (collectionViewLayout as! UICollectionViewFlowLayout).minimumLineSpacing
         let cellWidth = (collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width
         let cellCount = CGFloat(courses?.count ?? 0)
-        var inset = (collectionView.bounds.size.width - (cellCount * cellWidth) - ((cellCount - 1) * cellSpacing)) * 0.5
+        
+        let collectionViewWidth = collectionView.bounds.size.width
+        let totalCellWidth = cellCount * cellWidth
+        
+        var inset: CGFloat
+        var count: CGFloat = 1
+        repeat {
+            inset = (collectionViewWidth - (totalCellWidth / count) - (((cellCount - 1) / count) * cellSpacing)) * 0.5
+            count = count + 1
+        } while (inset < 0)
+        
         inset = max(inset, 0.0);
         return UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
     }
@@ -144,6 +135,6 @@ class MyCoursesCollectionViewController: UICollectionViewController, UICollectio
     
 }
 
-protocol MyCoursesDelegate {
+protocol MyCoursesDelegate: class {
     func didFetchCourses(_ courses: [Course])
 }

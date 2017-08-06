@@ -7,17 +7,33 @@
 //
 
 import UIKit
-import Firebase
-import GoogleSignIn
-import FBSDKLoginKit
-import TwitterKit
 
-class LogInViewController: SpinnerViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+class LogInViewController: SpinnerViewController, AuthManagerDelegate {
+    
+    private var authManager: AuthManager?
     
     // MARK: IBOutlets
     @IBOutlet weak var invalidDataMessageLabel: UILabel! {
         didSet {
             self.invalidDataMessageLabel.text = nil
+        }
+    }
+    @IBOutlet weak var logInGoogleButton: RoundButton! {
+        didSet {
+            self.logInGoogleButton.backgroundColor = UIColor(rgb: 0xdd4b39)
+            self.logInGoogleButton.borderColor = UIColor(rgb: 0xdd4b39)
+        }
+    }
+    @IBOutlet weak var logInTwitterButton: RoundButton! {
+        didSet {
+            self.logInTwitterButton.backgroundColor = UIColor(rgb: 0x55acee)
+            self.logInTwitterButton.borderColor = UIColor(rgb: 0x55acee)
+        }
+    }
+    @IBOutlet weak var logInFacebookButton: RoundButton! {
+        didSet {
+            self.logInFacebookButton.backgroundColor = UIColor(rgb: 0x3b5998)
+            self.logInFacebookButton.borderColor = UIColor(rgb: 0x3b5998)
         }
     }
     @IBOutlet weak var logInButton: UIButton!
@@ -47,35 +63,11 @@ class LogInViewController: SpinnerViewController, GIDSignInDelegate, GIDSignInUI
     
     private let iconMargin = 2
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
-    }
-    
     // MARK: Social Networks
     @IBAction func logInWithFacebookDidTouch() {
         startLoading()
-        if let accessToken = FBSDKAccessToken.current() {
-            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
-            self.signInSocialNetwork(withCredential: credential)
-        } else {
-            let manager = FBSDKLoginManager()
-            manager.logIn(withReadPermissions: ["public_profile", "email", "user_friends"], from: self) { [weak self ] result, error in
-                guard error == nil else {
-                    self?.stopLoading()
-                    self?.showErrorAlert(withMessage: error?.localizedDescription ?? "Unexpected error, please try again")
-                    return
-                }
-                
-                if !result!.isCancelled {
-                    let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                    self?.signInSocialNetwork(withCredential: credential)
-                }
-                
-                self?.stopLoading()
-            }
-        }
+        authManager = FacebookAuthManager(delegate: self)
+        authManager?.logIn()
     }
     
     @IBAction func logOut(segue: UIStoryboardSegue) { }
@@ -83,31 +75,14 @@ class LogInViewController: SpinnerViewController, GIDSignInDelegate, GIDSignInUI
     
     @IBAction func logInWithGoogleDidTouch() {
         startLoading()
-        if GIDSignIn.sharedInstance().hasAuthInKeychain() {
-            GIDSignIn.sharedInstance().signInSilently()
-        } else {
-            GIDSignIn.sharedInstance().signIn()
-        }
+        authManager = GoogleAuthManager(delegate: self)
+        authManager?.logIn()
     }
     
     @IBAction func logInWithTwitterDidTouch() {
         startLoading()
-        let store = Twitter.sharedInstance().sessionStore
-        if let session = store.session() {
-            let credential = TwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
-            self.signInSocialNetwork(withCredential: credential)
-        } else {
-            Twitter.sharedInstance().logIn(with: self) { [weak self] session, error in
-                guard error == nil, let session = session else {
-                    self?.stopLoading()
-                    self?.showErrorAlert(withMessage: error?.localizedDescription ?? "Unexpected error, please try again")
-                    return
-                }
-                
-                let credential = TwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
-                self?.signInSocialNetwork(withCredential: credential)
-            }
-        }
+        authManager = TwitterAuthManager(delegate: self)
+        authManager?.logIn()
     }
 
     // MARK: Button Actions
@@ -130,38 +105,24 @@ class LogInViewController: SpinnerViewController, GIDSignInDelegate, GIDSignInUI
         
         startLoading()
         self.invalidDataMessageLabel.text = nil
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { [weak self] user, error in
-            self?.stopLoading()
-            guard error == nil else {
-                self?.showErrorAlert(withMessage: error?.localizedDescription)
-                return
-            }
-            
-            self?.performSegue(withIdentifier: "Courses Scene", sender: nil)
-        }
+        
+        authManager = EmailAuthManager(delegate: self, email: emailTextField.text!, password: passwordTextField.text!)
+        authManager?.logIn()
     }
     
-    // MARK: GIDSignInDelegate
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        guard error == nil, let authentication = user.authentication else {
-            stopLoading()
-            return
-        }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                        accessToken: authentication.accessToken)
-        self.signInSocialNetwork(withCredential: credential)
+    // MARK: AuthManagerDelegate
+    
+    func didLogInSuccess() {
+        stopLoading()
+        self.performSegue(withIdentifier: "Courses Scene", sender: nil)
     }
     
-    // MARK: Utils
-    func signInSocialNetwork(withCredential credential: AuthCredential) {
-        Auth.auth().signIn(with: credential) { [weak self] user, error in
-            self?.stopLoading()
-            guard error == nil else {
-                self?.showErrorAlert(withMessage: error?.localizedDescription)
-                return
-            }
-            
-            self?.performSegue(withIdentifier: "Courses Scene", sender: nil)
-        }
+    func didLogInCancel() {
+        stopLoading()
+    }
+    
+    func didLogInError(withMessage: String?) {
+        stopLoading()
+        self.showErrorAlert(withMessage: withMessage)
     }
 }
