@@ -16,23 +16,12 @@ class MyCoursesCollectionViewController: UICollectionViewController, UICollectio
     
     private var indexSelected: IndexPath?
     weak var delegate: MyCoursesDelegate?
-    private let ref = Database.database().reference(withPath: "courses")
     private var courses : [Course]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.delegate = self
         fetchCourses()
-    }
-    
-    func addCourse(_ course: Course) {
-        courses?.append(course)
-        saveCourse(course)
-    }
-    
-    private func saveCourse(_ course: Course) {
-        let courseRef = ref.child(course.name)
-        courseRef.setValue(course.toAnyObject())
     }
     
     private func fetchCourses() {

@@ -36,7 +36,7 @@ class CoursesViewController: SpinnerViewController, MyCoursesDelegate, AuthManag
     
     @IBAction func addCourse(segue: UIStoryboardSegue) {
         if let course = newCourse {
-            coursesCVC.addCourse(course)
+            FirebaseManager.sharedInstance.save(value: course, path: "courses")
         }
     }
     

@@ -12,4 +12,5 @@ import FirebaseDatabase
 protocol FirebaseObservable {
     init?(with snapshot: DataSnapshot?)
     func toAnyObject() -> Any
+    var id: String { get }
 }

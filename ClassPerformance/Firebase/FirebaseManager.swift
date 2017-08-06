@@ -44,10 +44,13 @@ class FirebaseManager {
             }
         })
     }
-//    
-//    func save <T: FirebaseObservable> (value: T, path: String) {
-//        let courseRef = ref.child(course.name)
-//        courseRef.setValue(course.toAnyObject())
-//    }
+    
+    func save <T: FirebaseObservable> (value: T, path: String? = nil) {
+        var reference = ref
+        if let path = path {
+            reference = reference.child(path)
+        }
+        reference.child(value.id).setValue(value.toAnyObject())
+    }
     
 }
