@@ -77,7 +77,17 @@ class MyCoursesCollectionViewController: UICollectionViewController, UICollectio
         let cellSpacing = (collectionViewLayout as! UICollectionViewFlowLayout).minimumLineSpacing
         let cellWidth = (collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width
         let cellCount = CGFloat(courses?.count ?? 0)
-        var inset = (collectionView.bounds.size.width - (cellCount * cellWidth) - ((cellCount - 1) * cellSpacing)) * 0.5
+        
+        let collectionViewWidth = collectionView.bounds.size.width
+        let totalCellWidth = cellCount * cellWidth
+        
+        var inset: CGFloat
+        var count: CGFloat = 1
+        repeat {
+            inset = (collectionViewWidth - (totalCellWidth / count) - (((cellCount - 1) / count) * cellSpacing)) * 0.5
+            count = count + 1
+        } while (inset < 0)
+        
         inset = max(inset, 0.0);
         return UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
     }

@@ -36,6 +36,7 @@
 		3FE0B9151F30D9B60079868C /* EmailAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0B9141F30D9B60079868C /* EmailAuthManager.swift */; };
 		3FE0B9181F30F6D00079868C /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE0B9171F30F6D00079868C /* FirebaseManager.swift */; };
 		3FF5E9DB1F1FDF8C00A3F0EC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF5E9DA1F1FDF8C00A3F0EC /* RoundButton.swift */; };
+		3FFF09A41F37B38100C11B19 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF09A31F37B38100C11B19 /* UIColor+RGB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		3FE0B9141F30D9B60079868C /* EmailAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailAuthManager.swift; path = Auth/EmailAuthManager.swift; sourceTree = "<group>"; };
 		3FE0B9171F30F6D00079868C /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Firebase/FirebaseManager.swift; sourceTree = "<group>"; };
 		3FF5E9DA1F1FDF8C00A3F0EC /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = Views/RoundButton.swift; sourceTree = "<group>"; };
+		3FFF09A31F37B38100C11B19 /* UIColor+RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+RGB.swift"; path = "Extensions/UIColor+RGB.swift"; sourceTree = "<group>"; };
 		565B78571A1FDAAEED0E1254 /* Pods-ClassPerformance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassPerformance.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClassPerformance/Pods-ClassPerformance.release.xcconfig"; sourceTree = "<group>"; };
 		9CB71F045517DDEB23FCE5DE /* Pods_ClassPerformance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClassPerformance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3F811DD51F1F390F00705127 /* ViewController+ErrorAlert.swift */,
+				3FFF09A31F37B38100C11B19 /* UIColor+RGB.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				3FF5E9DB1F1FDF8C00A3F0EC /* RoundButton.swift in Sources */,
 				3FB16A311F30AFA700FB27FD /* TwitterAuthManager.swift in Sources */,
 				3F2D80F91F1B77200057E77B /* Course.swift in Sources */,
+				3FFF09A41F37B38100C11B19 /* UIColor+RGB.swift in Sources */,
 				3F2D80FD1F1B79C70057E77B /* NewCourseViewController.swift in Sources */,
 				3F1EFD311F25E6D2002CC521 /* SpinnerViewController.swift in Sources */,
 				3FB16A2B1F30A19F00FB27FD /* AuthManager.swift in Sources */,

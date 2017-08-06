@@ -18,6 +18,24 @@ class LogInViewController: SpinnerViewController, AuthManagerDelegate {
             self.invalidDataMessageLabel.text = nil
         }
     }
+    @IBOutlet weak var logInGoogleButton: RoundButton! {
+        didSet {
+            self.logInGoogleButton.backgroundColor = UIColor(rgb: 0xdd4b39)
+            self.logInGoogleButton.borderColor = UIColor(rgb: 0xdd4b39)
+        }
+    }
+    @IBOutlet weak var logInTwitterButton: RoundButton! {
+        didSet {
+            self.logInTwitterButton.backgroundColor = UIColor(rgb: 0x55acee)
+            self.logInTwitterButton.borderColor = UIColor(rgb: 0x55acee)
+        }
+    }
+    @IBOutlet weak var logInFacebookButton: RoundButton! {
+        didSet {
+            self.logInFacebookButton.backgroundColor = UIColor(rgb: 0x3b5998)
+            self.logInFacebookButton.borderColor = UIColor(rgb: 0x3b5998)
+        }
+    }
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField! {

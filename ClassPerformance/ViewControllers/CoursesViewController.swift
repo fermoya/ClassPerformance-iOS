@@ -41,6 +41,7 @@ class CoursesViewController: SpinnerViewController, MyCoursesDelegate, AuthManag
     }
     
     // MARK: MyCourseDelegate
+    
     func didFetchCourses(_ courses: [Course]) {
         if courses.count == 0 {
             addTapGestureRecognizer()
