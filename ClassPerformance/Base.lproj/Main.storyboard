@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jLf-kn-w1r">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,14 +21,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="736" height="350"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzL-ry-lUj" userLabel="Log In Panel">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="350"/>
+                                <rect key="frame" x="20" y="171.99999999999997" width="374" height="328.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fyw-tb-c2h" userLabel="Social Networks Panel">
-                                        <rect key="frame" x="0.0" y="112.66666666666666" width="368" height="124.99999999999997"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMM-Ju-zmA" userLabel="Facebook Panel">
                                                 <rect key="frame" x="0.0" y="0.0" width="124.66666666666666" height="48"/>
@@ -321,28 +321,28 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz8-8n-QaW" userLabel="Email Panel">
-                                        <rect key="frame" x="378" y="85" width="338" height="180.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="148" width="374" height="180.33333333333331"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tym-1O-Y0t" userLabel="Email">
-                                                <rect key="frame" x="0.0" y="0.0" width="338" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3FL-cB-cN9">
-                                                <rect key="frame" x="0.0" y="35" width="338" height="30"/>
+                                                <rect key="frame" x="0.0" y="35" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgB-zp-1xL" userLabel="Invalid Data Message">
-                                                <rect key="frame" x="273.33333333333337" y="70" width="64.666666666666629" height="14.333333333333343"/>
+                                                <rect key="frame" x="309.33333333333326" y="70" width="64.666666666666686" height="14.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="1" green="0.32120051789999998" blue="0.26413579069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnN-Ce-P3D" userLabel="Log In" customClass="RoundButton" customModule="ClassPerformance" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="99.333333333333343" width="338" height="30"/>
+                                                <rect key="frame" x="0.0" y="99.333333333333314" width="374" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Log In"/>
                                                 <connections>
@@ -350,7 +350,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5S-PH-2ci" userLabel="Sign Up" customClass="RoundButton" customModule="ClassPerformance" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="134.33333333333334" width="338" height="30"/>
+                                                <rect key="frame" x="0.0" y="134.33333333333331" width="374" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="I need to create an account">
@@ -503,217 +503,27 @@
                         <outlet property="logInGoogleButton" destination="9DH-TT-DeY" id="1sU-Jx-dlR"/>
                         <outlet property="logInTwitterButton" destination="WYm-PC-efl" id="9pB-lx-RBo"/>
                         <outlet property="passwordTextField" destination="3FL-cB-cN9" id="czu-2a-kdH"/>
-                        <segue destination="4ZO-xV-Mcj" kind="show" identifier="Courses Scene" id="hNO-Zh-7bh"/>
+                        <segue destination="mka-Xm-7EU" kind="show" identifier="Courses Scene" id="Vbt-kr-TYS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="745" y="115"/>
         </scene>
-        <!--Courses-->
-        <scene sceneID="1av-eW-BWS">
-            <objects>
-                <viewController storyboardIdentifier="CoursesViewController" id="4ZO-xV-Mcj" customClass="CoursesViewController" customModule="ClassPerformance" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HC4-TB-Q5Y"/>
-                        <viewControllerLayoutGuide type="bottom" id="2yE-vk-eUZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Heb-89-WyT">
-                        <rect key="frame" x="0.0" y="64" width="736" height="350"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWc-Xh-bJl">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="350"/>
-                                <connections>
-                                    <segue destination="HWP-5Q-d26" kind="embed" id="Vww-oW-9Uz"/>
-                                </connections>
-                            </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no courses. Tap to add a new course." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGh-J2-Dfa" userLabel="Empty message">
-                                <rect key="frame" x="20" y="115.33333333333334" width="696" height="119.33333333333334"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                <color key="textColor" red="0.81097775284415663" green="0.90181962549234607" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="NWc-Xh-bJl" firstAttribute="centerX" secondItem="nGh-J2-Dfa" secondAttribute="centerX" id="9Be-ba-No3"/>
-                            <constraint firstItem="nGh-J2-Dfa" firstAttribute="leading" secondItem="Heb-89-WyT" secondAttribute="leadingMargin" id="Ffh-pN-a1D"/>
-                            <constraint firstAttribute="bottom" secondItem="NWc-Xh-bJl" secondAttribute="bottom" id="Ji1-PE-m6t"/>
-                            <constraint firstItem="NWc-Xh-bJl" firstAttribute="top" secondItem="HC4-TB-Q5Y" secondAttribute="bottom" id="QqR-fe-8o3"/>
-                            <constraint firstItem="NWc-Xh-bJl" firstAttribute="leading" secondItem="Heb-89-WyT" secondAttribute="leading" id="Zq5-PO-cpz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nGh-J2-Dfa" secondAttribute="trailing" id="jOM-1k-lUw"/>
-                            <constraint firstItem="nGh-J2-Dfa" firstAttribute="centerY" secondItem="Heb-89-WyT" secondAttribute="centerY" id="xkj-Xv-CUZ"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Courses" id="8Bu-gI-o5n">
-                        <barButtonItem key="leftBarButtonItem" title="Log out" id="Xwn-wd-Bu3">
-                            <connections>
-                                <action selector="logOutDidTap:" destination="4ZO-xV-Mcj" id="DsA-Iu-Vcr"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ikh-Lu-CnM">
-                            <connections>
-                                <segue destination="wjO-iS-Yzp" kind="presentation" identifier="New Course" id="EJv-Pm-Tgc"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="coursesContainer" destination="NWc-Xh-bJl" id="Dar-Ry-SWe"/>
-                        <outlet property="emptyMessage" destination="nGh-J2-Dfa" id="AOy-YU-2kL"/>
-                        <segue destination="1tk-QI-d6g" kind="unwind" identifier="Log Out" unwindAction="logOutWithSegue:" id="rjR-Vn-HgM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KUt-MB-yOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1tk-QI-d6g" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1936" y="115"/>
-        </scene>
-        <!--My Courses Collection View Controller-->
-        <scene sceneID="bIG-rz-urg">
-            <objects>
-                <collectionViewController id="HWP-5Q-d26" customClass="MyCoursesCollectionViewController" customModule="ClassPerformance" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="lKf-xk-pxS">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="350"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="zNh-Or-Yt6">
-                            <size key="itemSize" width="120" height="120"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Course Cell" id="Iow-cG-vBK" customClass="MyCoursesCollectionViewCell" customModule="ClassPerformance" customModuleProvider="target">
-                                <rect key="frame" x="30" y="0.0" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hug-PD-Kug" customClass="CourseCellButton" customModule="ClassPerformance" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="12" maxY="0.0"/>
-                                            <state key="normal" title="Englishhh Maths Frecnh English Maths asdadad adasdasdasd sfdsdfs">
-                                                <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Englishhh Maths Frecnh English Maths asdadad adasdasdasd sfdsdfs"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </button>
-                                    </subviews>
-                                </view>
-                                <color key="backgroundColor" red="0.10515073279999999" green="1" blue="0.212862837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="hug-PD-Kug" firstAttribute="leading" secondItem="Iow-cG-vBK" secondAttribute="leading" id="0Zd-ZW-XfW"/>
-                                    <constraint firstAttribute="trailing" secondItem="hug-PD-Kug" secondAttribute="trailing" id="Aj2-Ws-7f9"/>
-                                    <constraint firstItem="hug-PD-Kug" firstAttribute="top" secondItem="Iow-cG-vBK" secondAttribute="top" id="GUW-Cb-uwN"/>
-                                    <constraint firstAttribute="bottom" secondItem="hug-PD-Kug" secondAttribute="bottom" id="GWK-O3-ZNz"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="courseButton" destination="hug-PD-Kug" id="LZ2-K4-enl"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="HWP-5Q-d26" id="u1d-h4-fx1"/>
-                            <outlet property="delegate" destination="HWP-5Q-d26" id="hyc-y0-ki1"/>
-                        </connections>
-                    </collectionView>
-                    <connections>
-                        <segue destination="mka-Xm-7EU" kind="show" identifier="Course Storyboard" id="9Hf-cj-hHx"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uiq-hO-UtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2836" y="115"/>
-        </scene>
-        <!--Course-->
+        <!--TabBarViewController-->
         <scene sceneID="ZB5-ri-eId">
             <objects>
-                <viewControllerPlaceholder storyboardName="Course" id="mka-Xm-7EU" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Course" referencedIdentifier="TabBarViewController" id="mka-Xm-7EU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWr-8p-bYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3647" y="115"/>
-        </scene>
-        <!--New Course-->
-        <scene sceneID="iBa-2z-GuC">
-            <objects>
-                <viewController id="usc-Sl-hJE" customClass="NewGroupViewController" customModule="ClassPerformance" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BkZ-6Y-68K"/>
-                        <viewControllerLayoutGuide type="bottom" id="ECt-EN-V0r"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UVU-AB-5bv">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-cq-NuT" userLabel="New Group Panel">
-                                <rect key="frame" x="20" y="169.66666666666666" width="696" height="75"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5C-GN-6ox" userLabel="Name">
-                                        <rect key="frame" x="0.0" y="0.0" width="696" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xsq-Ux-luy" userLabel="Description">
-                                        <rect key="frame" x="0.0" y="45" width="696" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="l5C-GN-6ox" firstAttribute="centerX" secondItem="aR0-cq-NuT" secondAttribute="centerX" id="2B4-3Y-za8"/>
-                                    <constraint firstItem="l5C-GN-6ox" firstAttribute="leading" secondItem="aR0-cq-NuT" secondAttribute="leading" id="5ev-fw-pqM"/>
-                                    <constraint firstItem="Xsq-Ux-luy" firstAttribute="trailing" secondItem="l5C-GN-6ox" secondAttribute="trailing" id="Czb-cE-QeC"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xsq-Ux-luy" secondAttribute="bottom" id="NSg-lT-vjP"/>
-                                    <constraint firstItem="Xsq-Ux-luy" firstAttribute="leading" secondItem="l5C-GN-6ox" secondAttribute="leading" id="dLq-fY-IV6"/>
-                                    <constraint firstItem="Xsq-Ux-luy" firstAttribute="top" secondItem="l5C-GN-6ox" secondAttribute="bottom" constant="15" id="lMf-FW-2nT"/>
-                                    <constraint firstItem="l5C-GN-6ox" firstAttribute="top" secondItem="aR0-cq-NuT" secondAttribute="top" id="uQz-tJ-bW2"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="aR0-cq-NuT" secondAttribute="trailing" id="SCD-o4-tAk"/>
-                            <constraint firstItem="aR0-cq-NuT" firstAttribute="leading" secondItem="UVU-AB-5bv" secondAttribute="leadingMargin" id="q58-ub-v6x"/>
-                            <constraint firstItem="aR0-cq-NuT" firstAttribute="centerY" secondItem="UVU-AB-5bv" secondAttribute="centerY" id="vXT-af-6S1"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="New Course" id="bTG-Xt-Apf">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5sc-X9-Qzr">
-                            <connections>
-                                <action selector="cancel:" destination="usc-Sl-hJE" id="amy-ad-foz"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="1cA-pi-hGN">
-                            <connections>
-                                <action selector="doneFillingNewCourseInfo:" destination="usc-Sl-hJE" id="Q2h-7R-HAd"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="descriptionTextField" destination="Xsq-Ux-luy" id="va1-qW-e29"/>
-                        <outlet property="nameTextField" destination="l5C-GN-6ox" id="i6q-yQ-HHq"/>
-                        <segue destination="1tk-QI-d6g" kind="unwind" identifier="Add New Course" unwindAction="addCourseWithSegue:" id="VgX-nL-3kv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UCg-GA-5WU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2951.1999999999998" y="875.71214392803608"/>
+            <point key="canvasLocation" x="1456" y="320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TgI-4u-1d9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jLf-kn-w1r" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Z1l-5T-YDF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Z1l-5T-YDF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -735,26 +545,26 @@
                         <viewControllerLayoutGuide type="bottom" id="pmI-gg-ajh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gdf-k2-ijv">
-                        <rect key="frame" x="0.0" y="64" width="736" height="350"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-Cm-0Zj" userLabel="Sign Up Panel">
-                                <rect key="frame" x="20" y="95" width="696" height="160"/>
+                                <rect key="frame" x="20" y="256" width="374" height="160"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C77-Eh-HX6" userLabel="Email">
-                                        <rect key="frame" x="100" y="0.0" width="496" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24j-rx-9Ex" userLabel="Password Text Field">
-                                        <rect key="frame" x="100" y="40" width="496" height="30"/>
+                                        <rect key="frame" x="0.0" y="40" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQb-3W-J6U" userLabel="Sign Up" customClass="RoundButton" customModule="ClassPerformance" customModuleProvider="target">
-                                        <rect key="frame" x="100" y="130" width="496" height="30"/>
+                                        <rect key="frame" x="0.0" y="130" width="374" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -765,7 +575,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9R-K6-cEx">
-                                        <rect key="frame" x="100" y="80" width="496" height="30"/>
+                                        <rect key="frame" x="0.0" y="80" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -829,30 +639,12 @@
                         <outlet property="confimPasswordTextField" destination="C9R-K6-cEx" id="vf8-ug-Hvg"/>
                         <outlet property="emailTextField" destination="C77-Eh-HX6" id="VUa-Pp-Gtt"/>
                         <outlet property="passwordTextField" destination="24j-rx-9Ex" id="ucl-eO-Qmj"/>
-                        <segue destination="4ZO-xV-Mcj" kind="show" identifier="Courses Scene" id="mN0-cV-hV0"/>
+                        <segue destination="mka-Xm-7EU" kind="show" identifier="Courses Scene" id="yIo-ru-KjG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nk6-Bx-T68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="745" y="959"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="E7L-tc-PFl">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wjO-iS-Yzp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8vl-co-2ZS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="usc-Sl-hJE" kind="relationship" relationship="rootViewController" id="1mB-gP-FP4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YFe-OF-NFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2012" y="875.71214392803608"/>
         </scene>
     </scenes>
     <resources>
@@ -861,6 +653,6 @@
         <image name="twitter" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mN0-cV-hV0"/>
+        <segue reference="Vbt-kr-TYS"/>
     </inferredMetricsTieBreakers>
 </document>

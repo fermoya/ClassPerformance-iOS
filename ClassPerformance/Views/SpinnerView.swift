@@ -23,4 +23,8 @@ class SpinnerView: UIView {
         activityIndicatorView.stopAnimating()
         isHidden = true
     }
+    
+    var isAnimating: Bool {
+        return activityIndicatorView.isAnimating
+    }
 }

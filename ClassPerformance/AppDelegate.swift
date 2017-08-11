@@ -47,12 +47,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func checkAutoLogin() {
         if Auth.auth().currentUser != nil {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let logInVC = storyboard.instantiateViewController(withIdentifier: "LogInViewController")
-            let coursesVC = storyboard.instantiateViewController(withIdentifier: "CoursesViewController")
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let logInVC = mainStoryboard.instantiateViewController(withIdentifier: "LogInViewController")
+            
+            let coursesStoryboard = UIStoryboard(name: "Course", bundle: nil)
+            let tabBarVC = coursesStoryboard.instantiateViewController(withIdentifier: "TabBarViewController")
             let navigationController = UINavigationController()
             navigationController.pushViewController(logInVC, animated: false)
-            navigationController.pushViewController(coursesVC, animated: false)
+            navigationController.pushViewController(tabBarVC, animated: false)
             self.window?.rootViewController = navigationController
         }
     }

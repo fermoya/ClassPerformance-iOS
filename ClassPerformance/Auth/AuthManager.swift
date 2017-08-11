@@ -20,6 +20,10 @@ class AuthManager: NSObject {
         return Auth.auth().currentUser?.uid
     }
     
+    static var providerId: String? {
+        return Auth.auth().currentUser?.providerData.first?.providerID
+    }
+    
     init(delegate: AuthManagerDelegate) {
         self.delegate = delegate;
     }

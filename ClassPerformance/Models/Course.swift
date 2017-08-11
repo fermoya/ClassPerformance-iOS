@@ -21,7 +21,6 @@ struct Course: FirebaseObservable {
     var description: String
     var ref: DatabaseReference?
     var key: String?
-    var user: String
     
     init?(with snapshot: DataSnapshot?) {
         guard let snapshot = snapshot else { return nil }
@@ -31,20 +30,17 @@ struct Course: FirebaseObservable {
         name = snapshotValue["name"] as! String
         description = snapshotValue["description"] as! String
         ref = snapshot.ref
-        user = snapshotValue["name"] as! String
     }
     
-    init(name: String, description: String, user: String) {
+    init(name: String, description: String) {
         self.name = name
         self.description = description
-        self.user = user
     }
     
     func toAnyObject() -> Any {
         return [
             "name": name,
-            "description": description,
-            "user": user
+            "description": description
         ]
     }
 }

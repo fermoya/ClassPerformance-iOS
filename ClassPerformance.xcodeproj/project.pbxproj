@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		393CC493D4F35DD253F3E0DA /* Pods_ClassPerformance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB71F045517DDEB23FCE5DE /* Pods_ClassPerformance.framework */; };
 		3F004D781F24A7F200CDD919 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F004D771F24A7F200CDD919 /* SpinnerView.swift */; };
+		3F10B0151F3DAC160014F279 /* NewExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F10B0141F3DAC160014F279 /* NewExamViewController.swift */; };
+		3F129F041F3C7F30003C3018 /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F129F031F3C7F30003C3018 /* Exam.swift */; };
+		3F129F061F3C8882003C3018 /* LogOutTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F129F051F3C8882003C3018 /* LogOutTabBarViewController.swift */; };
+		3F129F091F3C9247003C3018 /* TabBarIndexable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F129F081F3C9247003C3018 /* TabBarIndexable.swift */; };
 		3F1EFD2F1F25E45B002CC521 /* SpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EFD2E1F25E45B002CC521 /* SpinnerView.xib */; };
 		3F1EFD311F25E6D2002CC521 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EFD301F25E6D2002CC521 /* SpinnerViewController.swift */; };
 		3F2D80F91F1B77200057E77B /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D80F81F1B77200057E77B /* Course.swift */; };
@@ -19,6 +23,10 @@
 		3F559AC41F1EA42E003FE726 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F559AC31F1EA42E003FE726 /* SignUpViewController.swift */; };
 		3F5C39301F1E380100DC10D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F5C392F1F1E380100DC10D0 /* GoogleService-Info.plist */; };
 		3F811DD61F1F390F00705127 /* ViewController+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F811DD51F1F390F00705127 /* ViewController+ErrorAlert.swift */; };
+		3F8255351F38E792006E652C /* MyExamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8255341F38E792006E652C /* MyExamsTableViewController.swift */; };
+		3F8255391F38EBD0006E652C /* ExamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8255381F38EBD0006E652C /* ExamsViewController.swift */; };
+		3F82553B1F38EF75006E652C /* FirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82553A1F38EF75006E652C /* FirebaseViewController.swift */; };
+		3F82553D1F38F703006E652C /* FirebaseObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82553C1F38F703006E652C /* FirebaseObserver.swift */; };
 		3F8BA0791F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BA0781F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift */; };
 		3F8BA07B1F1CC9F900DDA298 /* MyCoursesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BA07A1F1CC9F900DDA298 /* MyCoursesCollectionViewCell.swift */; };
 		3FB16A281F30977600FB27FD /* FirebaseObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB16A271F30977600FB27FD /* FirebaseObservable.swift */; };
@@ -42,18 +50,26 @@
 /* Begin PBXFileReference section */
 		260F50A2F0C693B51DBCD7A3 /* Pods-ClassPerformance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClassPerformance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClassPerformance/Pods-ClassPerformance.debug.xcconfig"; sourceTree = "<group>"; };
 		3F004D771F24A7F200CDD919 /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpinnerView.swift; path = Views/SpinnerView.swift; sourceTree = "<group>"; };
+		3F10B0141F3DAC160014F279 /* NewExamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewExamViewController.swift; sourceTree = "<group>"; };
+		3F129F031F3C7F30003C3018 /* Exam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Exam.swift; path = Models/Exam.swift; sourceTree = "<group>"; };
+		3F129F051F3C8882003C3018 /* LogOutTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutTabBarViewController.swift; sourceTree = "<group>"; };
+		3F129F081F3C9247003C3018 /* TabBarIndexable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarIndexable.swift; sourceTree = "<group>"; };
 		3F1EFD2E1F25E45B002CC521 /* SpinnerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpinnerView.xib; path = Xib/SpinnerView.xib; sourceTree = "<group>"; };
-		3F1EFD301F25E6D2002CC521 /* SpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpinnerViewController.swift; path = ViewControllers/SpinnerViewController.swift; sourceTree = "<group>"; };
+		3F1EFD301F25E6D2002CC521 /* SpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		3F2D80F81F1B77200057E77B /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Course.swift; path = Models/Course.swift; sourceTree = "<group>"; };
-		3F2D80FA1F1B78410057E77B /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesViewController.swift; path = ViewControllers/CoursesViewController.swift; sourceTree = "<group>"; };
-		3F2D80FC1F1B79C70057E77B /* NewCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewCourseViewController.swift; path = ViewControllers/NewCourseViewController.swift; sourceTree = "<group>"; };
+		3F2D80FA1F1B78410057E77B /* CoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoursesViewController.swift; path = "/Users/fmoyader/Documents/iOS Course/ClassPerformance/ClassPerformance/ViewControllers/Courses/CoursesViewController.swift"; sourceTree = "<absolute>"; };
+		3F2D80FC1F1B79C70057E77B /* NewCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCourseViewController.swift; sourceTree = "<group>"; };
 		3F2D81041F1B897F0057E77B /* CourseCellButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseCellButton.swift; path = Views/CourseCellButton.swift; sourceTree = "<group>"; };
 		3F2E2BA01F2755C9004A6AAC /* Course.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Course.storyboard; sourceTree = "<group>"; };
 		3F559AC21F1EA1CA003FE726 /* ClassPerformance.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClassPerformance.entitlements; sourceTree = "<group>"; };
-		3F559AC31F1EA42E003FE726 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ViewControllers/SignUpViewController.swift; sourceTree = "<group>"; };
+		3F559AC31F1EA42E003FE726 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "/Users/fmoyader/Documents/iOS Course/ClassPerformance/ClassPerformance/ViewControllers/Login/SignUpViewController.swift"; sourceTree = "<absolute>"; };
 		3F5C392F1F1E380100DC10D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F811DD51F1F390F00705127 /* ViewController+ErrorAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ViewController+ErrorAlert.swift"; path = "Extensions/ViewController+ErrorAlert.swift"; sourceTree = "<group>"; };
-		3F8BA0781F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCoursesCollectionViewController.swift; path = ViewControllers/MyCoursesCollectionViewController.swift; sourceTree = "<group>"; };
+		3F8255341F38E792006E652C /* MyExamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExamsTableViewController.swift; sourceTree = "<group>"; };
+		3F8255381F38EBD0006E652C /* ExamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamsViewController.swift; sourceTree = "<group>"; };
+		3F82553A1F38EF75006E652C /* FirebaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseViewController.swift; sourceTree = "<group>"; };
+		3F82553C1F38F703006E652C /* FirebaseObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseObserver.swift; path = Firebase/FirebaseObserver.swift; sourceTree = "<group>"; };
+		3F8BA0781F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoursesCollectionViewController.swift; sourceTree = "<group>"; };
 		3F8BA07A1F1CC9F900DDA298 /* MyCoursesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCoursesCollectionViewCell.swift; path = Views/MyCoursesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FB16A271F30977600FB27FD /* FirebaseObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseObservable.swift; path = Firebase/FirebaseObservable.swift; sourceTree = "<group>"; };
 		3FB16A2A1F30A19F00FB27FD /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthManager.swift; path = Auth/AuthManager.swift; sourceTree = "<group>"; };
@@ -67,7 +83,7 @@
 		3FB5A4E71F18D3CB003035DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FB5A4EA1F18D3CB003035DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FB5A4EC1F18D3CB003035DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FB5A4F71F18EE22003035DF /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = ViewControllers/LogInViewController.swift; sourceTree = "<group>"; };
+		3FB5A4F71F18EE22003035DF /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = "/Users/fmoyader/Documents/iOS Course/ClassPerformance/ClassPerformance/ViewControllers/Login/LogInViewController.swift"; sourceTree = "<absolute>"; };
 		3FD17A721F20CAE500F11F01 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		3FE0B9141F30D9B60079868C /* EmailAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmailAuthManager.swift; path = Auth/EmailAuthManager.swift; sourceTree = "<group>"; };
 		3FE0B9171F30F6D00079868C /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Firebase/FirebaseManager.swift; sourceTree = "<group>"; };
@@ -89,6 +105,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F10B0101F3DA9860014F279 /* Exams */ = {
+			isa = PBXGroup;
+			children = (
+				3F8255381F38EBD0006E652C /* ExamsViewController.swift */,
+				3F8255341F38E792006E652C /* MyExamsTableViewController.swift */,
+				3F10B0141F3DAC160014F279 /* NewExamViewController.swift */,
+			);
+			path = Exams;
+			sourceTree = "<group>";
+		};
+		3F10B0111F3DA9920014F279 /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				3F2D80FA1F1B78410057E77B /* CoursesViewController.swift */,
+				3F8BA0781F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift */,
+				3F2D80FC1F1B79C70057E77B /* NewCourseViewController.swift */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		3F10B0121F3DA9A10014F279 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3FB5A4F71F18EE22003035DF /* LogInViewController.swift */,
+				3F559AC31F1EA42E003FE726 /* SignUpViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3F129F071F3C9217003C3018 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3F129F081F3C9247003C3018 /* TabBarIndexable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3F1EFD2D1F25E432002CC521 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				3F2D80F81F1B77200057E77B /* Course.swift */,
+				3F129F031F3C7F30003C3018 /* Exam.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -159,6 +213,7 @@
 		3FB5A4DF1F18D3CB003035DF /* ClassPerformance */ = {
 			isa = PBXGroup;
 			children = (
+				3F129F071F3C9217003C3018 /* Utils */,
 				3FE0B9161F30F6AE0079868C /* Firebase */,
 				3FB16A291F30A16C00FB27FD /* Auth */,
 				3F1EFD2D1F25E432002CC521 /* Xib */,
@@ -182,21 +237,23 @@
 		3FB5A4F21F18EBCF003035DF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3FB5A4F71F18EE22003035DF /* LogInViewController.swift */,
-				3F2D80FA1F1B78410057E77B /* CoursesViewController.swift */,
-				3F2D80FC1F1B79C70057E77B /* NewCourseViewController.swift */,
-				3F8BA0781F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift */,
-				3F559AC31F1EA42E003FE726 /* SignUpViewController.swift */,
+				3F10B0121F3DA9A10014F279 /* Login */,
+				3F10B0111F3DA9920014F279 /* Courses */,
+				3F10B0101F3DA9860014F279 /* Exams */,
 				3F1EFD301F25E6D2002CC521 /* SpinnerViewController.swift */,
+				3F82553A1F38EF75006E652C /* FirebaseViewController.swift */,
+				3F129F051F3C8882003C3018 /* LogOutTabBarViewController.swift */,
 			);
 			name = ViewControllers;
-			sourceTree = "<group>";
+			path = "/Users/fmoyader/Documents/iOS Course/ClassPerformance/ClassPerformance/ViewControllers";
+			sourceTree = "<absolute>";
 		};
 		3FE0B9161F30F6AE0079868C /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
 				3FE0B9171F30F6D00079868C /* FirebaseManager.swift */,
 				3FB16A271F30977600FB27FD /* FirebaseObservable.swift */,
+				3F82553C1F38F703006E652C /* FirebaseObserver.swift */,
 			);
 			name = Firebase;
 			sourceTree = "<group>";
@@ -355,17 +412,25 @@
 				3FB16A311F30AFA700FB27FD /* TwitterAuthManager.swift in Sources */,
 				3F2D80F91F1B77200057E77B /* Course.swift in Sources */,
 				3FFF09A41F37B38100C11B19 /* UIColor+RGB.swift in Sources */,
+				3F129F091F3C9247003C3018 /* TabBarIndexable.swift in Sources */,
 				3F2D80FD1F1B79C70057E77B /* NewCourseViewController.swift in Sources */,
+				3F129F041F3C7F30003C3018 /* Exam.swift in Sources */,
 				3F1EFD311F25E6D2002CC521 /* SpinnerViewController.swift in Sources */,
+				3F10B0151F3DAC160014F279 /* NewExamViewController.swift in Sources */,
 				3FB16A2B1F30A19F00FB27FD /* AuthManager.swift in Sources */,
+				3F129F061F3C8882003C3018 /* LogOutTabBarViewController.swift in Sources */,
 				3FE0B9151F30D9B60079868C /* EmailAuthManager.swift in Sources */,
 				3F811DD61F1F390F00705127 /* ViewController+ErrorAlert.swift in Sources */,
+				3F8255391F38EBD0006E652C /* ExamsViewController.swift in Sources */,
 				3FB5A4E11F18D3CB003035DF /* AppDelegate.swift in Sources */,
+				3F8255351F38E792006E652C /* MyExamsTableViewController.swift in Sources */,
 				3FE0B9181F30F6D00079868C /* FirebaseManager.swift in Sources */,
 				3F8BA07B1F1CC9F900DDA298 /* MyCoursesCollectionViewCell.swift in Sources */,
 				3FB16A2F1F30AC4F00FB27FD /* AuthManagerDelegate.swift in Sources */,
 				3F8BA0791F1CC90B00DDA298 /* MyCoursesCollectionViewController.swift in Sources */,
+				3F82553B1F38EF75006E652C /* FirebaseViewController.swift in Sources */,
 				3FB5A4F81F18EE22003035DF /* LogInViewController.swift in Sources */,
+				3F82553D1F38F703006E652C /* FirebaseObserver.swift in Sources */,
 				3FB16A331F30B0A500FB27FD /* GoogleAuthManager.swift in Sources */,
 				3FB16A281F30977600FB27FD /* FirebaseObservable.swift in Sources */,
 				3FB16A2D1F30AB8C00FB27FD /* FacebookAuthManager.swift in Sources */,

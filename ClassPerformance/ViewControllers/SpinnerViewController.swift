@@ -36,5 +36,9 @@ class SpinnerViewController: UIViewController {
     func stopLoading() {
         spinnerView.stopAnimating()
     }
+    
+    var isLoading: Bool {
+        return spinnerView.isAnimating
+    }
 
 }
